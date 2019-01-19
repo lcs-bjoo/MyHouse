@@ -22,6 +22,8 @@ public class MyHouse
     private Circle doorknob;
     private Square grass;
     private Square sky;
+    private Circle sun;
+    private Tree pineTree;
 
     /**
      * Constructor for objects of class MyHouse
@@ -40,6 +42,14 @@ public class MyHouse
         doorknob = new Circle();
         grass = new Square();
         sky = new Square();
+        sun = new Circle();
+        
+        drawHouse();
+        
+        //create pine create
+        pineTree = new Tree(0,20);
+        pineTree = new Tree(100, 25);
+        pineTree = new Tree (185, 20);
         
     }
 
@@ -52,8 +62,18 @@ public class MyHouse
         // Arrange each object
         // Set up the sun Ctrl Space
       
+        sky.makeVisible();
+        sky.changeColor("blue");
+        sky.changeSize(1000);
+        sky.moveHorizontal(-60);
+        sky.moveVertical(-50);
         
-      
+        sun.makeVisible();
+        sun.changeColor("yellow");
+        sun.moveVertical(-30);
+        sun.moveHorizontal(400);
+        sun.changeSize(100);
+        
         grass.makeVisible();
         grass.changeColor("green");
         grass.changeSize(1000);
@@ -107,6 +127,7 @@ public class MyHouse
         doorknob.moveVertical(215);
         doorknob.moveHorizontal(75);
         
+       
         
     
     }
